@@ -16,7 +16,7 @@ export function SimpleIFrame(){
     })
 
 	return (
-		<iframe src="http://localhost:3001/iframe" id="myiframe" name="myiframe" className="myiframe" title="Embedded Page" frameBorder="0"></iframe>
+		<iframe src="https://iframetoimport.netlify.app/" id="myiframe" name="myiframe" className="myiframe" title="Embedded Page" frameBorder="0"></iframe>
 	)
 }
 
