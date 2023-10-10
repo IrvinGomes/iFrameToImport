@@ -1,7 +1,23 @@
+import { useEffect } from "react";
+
 export function SimpleIFrame(){
-    return (
-        <iframe src="https://iframetobeimported.netlify.app/iframe" width="400" height="300" title="Embedded Page" frameBorder="0"></iframe>
-    )
+	
+    useEffect(()=>{
+        window.addEventListener('message', (event) => {
+            if (event.data && event.data.type === 'resize') {
+              const newHeight = event.data.payload.size;
+              // Set the iframe's height to the received height
+              const iframe = document.getElementById('myiframe');
+              if (iframe) {
+                iframe.style.height = newHeight + 'px';
+              }
+            }
+          });
+    })
+
+	return (
+		<iframe src="http://localhost:3001/iframe" id="myiframe" name="myiframe" className="myiframe" title="Embedded Page" frameBorder="0"></iframe>
+	)
 }
 
 export default SimpleIFrame;

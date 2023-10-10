@@ -36,6 +36,9 @@ body {
   width: 100%;
   min-height: 300px;
 }
+.myiframe{
+  width: 100%;
+}
 
 /*dropdown*/
 .dropdown {
