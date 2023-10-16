@@ -12,6 +12,7 @@ export function SimpleIFrame(){
                 iframe.style.height = newHeight + 'px';
               }
             }
+            console.log(event.data.payload)
           });
     })
 

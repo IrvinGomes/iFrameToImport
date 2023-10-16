@@ -15,7 +15,7 @@
 body {
   margin: 2em;
   padding: 1em;
-  background-color: aliceblue;
+  background-color: lightgreen;
 }
 /*Page Content*/
 .page{
@@ -34,7 +34,10 @@ body {
 }
 .storefrontIframe{
   width: 100%;
-  min-height: 300px;
+  /* min-height: 300px; */
+  border: none;
+  background-color: white;
+  height: 0;
 }
 .myiframe{
   width: 100%;

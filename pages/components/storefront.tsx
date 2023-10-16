@@ -1,7 +1,21 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export function Storefronts(){
     const [url, setUrl] =  useState('')
+
+    useEffect(()=>{
+        window.addEventListener('message', (event) => {
+            if (event.data && event.data.type === 'resize') {
+              const newHeight = event.data.payload.size;
+              // Set the iframe's height to the received height
+              const iframe = document.getElementById('myiframe');
+              if (iframe) {
+                iframe.style.height = newHeight + 'px';
+              }
+            }
+            console.log(event.data.payload)
+          });
+    })
 
 
     const handleSubmit = (e:any)=>{
@@ -23,7 +37,7 @@ export function Storefronts(){
                 <input type="text" name="url"/> <button>Load</button>
             </form>
             <br /><br />
-            <iframe src={url} frameBorder="0" id="storefrontIframe" className="storefrontIframe"></iframe>
+            <iframe src={url} frameBorder="0" id="myiframe" className="storefrontIframe"></iframe>
         </div>
     )
 }
