@@ -10,15 +10,18 @@ export function Storefronts(){
               // Set the iframe's height to the received height
               const iframe = document.getElementById('myiframe');
               if (iframe) {
-                iframe.style.height = newHeight + 'px';
+                if(newHeight !== iframe.style.height){
+                    iframe.style.height = 'none';
+                    iframe.style.height = newHeight + 'px';
+                }
               }
             }
-            console.log(event.data.payload)
           });
     })
 
 
     const handleSubmit = (e:any)=>{
+        document.getElementById('myiframe')!.style.minHeight = '300px'
         // Prevent the browser from reloading the page
         e.preventDefault();
 
