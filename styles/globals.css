@@ -20,13 +20,15 @@ body {
 /*Page Content*/
 .page{
   display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 .header{
   background-color: rgb(8,20,36) !important;
 }
 .content{
-  padding: 0 2em;
-  flex: 1;
+  padding: 2em;
+  flex-grow: 1;
 }
 .form{
   width: 100%;

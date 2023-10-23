@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Storefronts from './components/storefront'
 import { SimpleIFrame } from './components/simpleIFrame'
 import Header from './components/header'
+import Footer from './components/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -32,11 +33,12 @@ export default function Home() {
 		}
 
 	return (
-		<main>
-      <Header/>
-			<div className='page'>
-					<Storefronts/>
-			</div>
-		</main>
+		<div className='page'>
+			<Header/>
+        <div className='content'>
+          <Storefronts />
+        </div>
+			<Footer/>
+		</div>
 	)
 }
