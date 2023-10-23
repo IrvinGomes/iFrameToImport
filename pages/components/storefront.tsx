@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react"
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 export function Storefronts(){
     const [url, setUrl] =  useState('')
@@ -35,9 +37,11 @@ export function Storefronts(){
     }
 
     return (
-        <div>
+        <div className="content">
+            <br />
             <form onSubmit={handleSubmit} className="form">
-                <input type="text" name="url"/> <button>Load</button>
+                <TextField fullWidth label="Sandbox + MV Url" id="Sandbox + MV Url" name='url' style={{background:'white', borderRadius: '5px'}}/>
+                <Button variant="contained" style={{marginLeft: '5px'}}>Open</Button>
             </form>
             <br /><br />
             <iframe src={url} frameBorder="0" id="myiframe" className="storefrontIframe"></iframe>

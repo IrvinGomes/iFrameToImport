@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import { useState } from 'react'
 import Storefronts from './components/storefront'
 import { SimpleIFrame } from './components/simpleIFrame'
+import Header from './components/header'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -32,13 +33,9 @@ export default function Home() {
 
 	return (
 		<main>
-			<h1>AIR-vin</h1>
+      <Header/>
 			<div className='page'>
-				<button onClick={handleOpen} className='dropdownBtn'>Dropdown</button>
-				{open? isOpen(): null }
-					<div className="content">
-						{option == 1? <SimpleIFrame/>: <Storefronts/>}
-					</div>
+					<Storefronts/>
 			</div>
 		</main>
 	)

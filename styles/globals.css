@@ -13,13 +13,16 @@
 }
 
 body {
-  margin: 2em;
-  padding: 1em;
-  background-color: lightgreen;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(166,210,235,255);
 }
 /*Page Content*/
 .page{
   display: flex;
+}
+.header{
+  background-color: rgb(8,20,36);
 }
 .content{
   padding: 0 2em;
