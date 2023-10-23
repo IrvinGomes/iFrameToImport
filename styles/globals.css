@@ -22,7 +22,7 @@ body {
   display: flex;
 }
 .header{
-  background-color: rgb(8,20,36);
+  background-color: rgb(8,20,36) !important;
 }
 .content{
   padding: 0 2em;
