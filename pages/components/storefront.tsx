@@ -41,7 +41,7 @@ export function Storefronts(){
             <br />
             <form onSubmit={handleSubmit} className="form">
                 <TextField fullWidth label="Sandbox + MV Url" id="Sandbox + MV Url" name='url' style={{background:'white', borderRadius: '5px'}}/>
-                <Button variant="contained" style={{marginLeft: '5px'}}>Open</Button>
+                <Button variant="contained" style={{marginLeft: '5px'}}>Load</Button>
             </form>
             <br /><br />
             <iframe src={url} frameBorder="0" id="myiframe" className="storefrontIframe"></iframe>
