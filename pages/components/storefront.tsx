@@ -37,7 +37,7 @@ export function Storefronts(){
     }
 
     return (
-        <div>
+        <div className="toStorefrontWrapper">
             <form onSubmit={handleSubmit} className="form">
                 <TextField fullWidth label="Sandbox + MV Url" id="Sandbox + MV Url" name='url' style={{background:'white', borderRadius: '5px'}}/>
                 <Button variant="contained" style={{marginLeft: '5px'}}>Load</Button>

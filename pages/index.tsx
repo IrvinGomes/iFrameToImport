@@ -5,6 +5,7 @@ import Storefronts from './components/storefront'
 import { SimpleIFrame } from './components/simpleIFrame'
 import Header from './components/header'
 import Footer from './components/footer'
+import Sidebar from './components/sidebar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -35,9 +36,10 @@ export default function Home() {
 	return (
 		<div className='page'>
 			<Header/>
-        <div className='content'>
-          <Storefronts />
-        </div>
+			<div className='content'>
+				<Sidebar/>
+				<Storefronts />
+			</div>
 			<Footer/>
 		</div>
 	)
